@@ -6,12 +6,14 @@ import Featured from "../Featured/Featured";
 
 const Home = () => {
     return (
+
         <div>
             <Banner></Banner>
             <Featured></Featured>
             <ScholarshipCategories />
             <AboutUs></AboutUs>
         </div>
+        
     );
 };
 
