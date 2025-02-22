@@ -3,6 +3,7 @@ import { FaUserDoctor } from "react-icons/fa6";
 import { GoLaw } from "react-icons/go";
 import { MdAgriculture, MdScience } from "react-icons/md";
 
+
 const ScholarshipCategories = () => {
     return (
         <div className="container mx-auto px-4 py-16">
