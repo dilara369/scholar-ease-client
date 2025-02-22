@@ -5,6 +5,7 @@ const ModaretoHome = () => {
     const { user } = useAuth();
     const [isRole] = useRole();
 
+    
     return (
         <div className="bg-gray-50 min-h-screen py-8 px-4">
             <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
