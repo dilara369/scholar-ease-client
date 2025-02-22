@@ -44,7 +44,6 @@ const AdminHome = () => {
                         </span>
                     </div>
                 </div>
-
                 {/* Stats Section */}
                 <div className="flex justify-center items-center">
                     <div className="w-full md:w-2/3">
