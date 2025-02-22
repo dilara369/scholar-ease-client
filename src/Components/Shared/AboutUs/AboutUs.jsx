@@ -19,7 +19,6 @@ const AboutUs = () => {
                     </div>
                 </div>
 
-
                 {/* Image Section */}
                 <div className="flex-1 lg:order-2 grid grid-cols-1 gap-3 lg:grid-cols-2">
                     <div className="overflow-hidden rounded-full shadow-xl transform hover:scale-110 transition-all duration-500">
