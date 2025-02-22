@@ -93,6 +93,7 @@ const NavBer = () => {
                 </div>
             </div>
 
+
             {/* Mobile Navigation Menu */}
             {open && (
                 <div className="md:hidden bg-darkBlue p-4 rounded-b-lg absolute left-0 right-0 top-16 shadow-xl">
