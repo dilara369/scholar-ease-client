@@ -30,7 +30,6 @@ const ManageReview = () => {
             console.error("Error deleting review:", err);
         }
     };
-
     return (
         <div className="p-6 bg-gray-100 min-h-screen">
             <h2 className="text-4xl font-bold text-center text-blue-600 mb-8">
