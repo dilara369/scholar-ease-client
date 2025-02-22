@@ -1,0 +1,56 @@
+.card2Section {
+  position: relative;
+  display: flex;
+}
+
+.card2 {
+  height: 500px;
+  margin: 50px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.564);
+  overflow: hidden;
+}
+.image {
+  object-fit: cover;
+  height: 500px;
+  width: 350px;
+  border-radius: 3px;
+  transition: 0.9s;
+}
+.into {
+  height: 70px;
+  width: 350px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 50px;
+  background: rgba(27, 27, 27, 0.5);
+  color: white;
+  transition: 0.5s;
+}
+.card2h1 {
+  margin: 10px;
+}
+.card2p {
+  font-size: 15px;
+  margin: 10px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card2:hover {
+  cursor: pointer;
+}
+
+.card2:hover .into {
+  height: 150px;
+  bottom: 50px;
+  background: rgba(0, 0, 0, 0.429);
+  /* opacity: 0.2; */
+}
+.card2:hover .card2p {
+  opacity: 1;
+  visibility: visible;
+}
+.card2:hover .image {
+  transform: scale(1.1) rotate(-3deg);
+}
