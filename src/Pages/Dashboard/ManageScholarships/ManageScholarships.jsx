@@ -6,18 +6,17 @@ import { toast } from "react-toastify";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { FaEdit, FaTrash, FaInfoCircle } from "react-icons/fa";
 
+
 const ManageScholarships = () => {
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
     const [scholarships, refetch] = useScholarship();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [scholarshipData, setScholarshipData] = useState({});
-
     const handleEditFormSubmitBtn = (data) => {
         setScholarshipData(data);
         setIsModalOpen(true);
     };
-
     const handleCancelBtn = async (scholarship) => {
         try {
             const res = await axiosSecure.delete(`/scholarship/${scholarship._id}`);
