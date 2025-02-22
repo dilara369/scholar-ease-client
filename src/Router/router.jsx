@@ -22,6 +22,7 @@ import ModaretoHome from "../Pages/Dashboard/ModaretoHome/ModaretoHome";
 import NotFoundPage from "../Pages/Error/Error";
 import Profile from "../Pages/Dashboard/Profile/Profile";
 
+
 const router = createBrowserRouter([
     {
         path: '/',
