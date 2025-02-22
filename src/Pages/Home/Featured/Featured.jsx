@@ -4,9 +4,11 @@ import ScholarshipCart from "../../../Components/Accessories/ScholarshipCart/Sch
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+
 const Featured = () => {
     const [scholarships, setScholarships] = useState([]);
     const axiosPublic = useAxiosPublic();
+
 
     useEffect(() => {
         axiosPublic.get('/featuredScholarship')
