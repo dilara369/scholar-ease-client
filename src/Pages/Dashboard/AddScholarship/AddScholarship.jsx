@@ -9,7 +9,7 @@ const AddScholarship = () => {
     const axiosSecure = useAxiosSecure();
     const [loading, setLoading] = useState(false);
     const postDate = new Date().toLocaleDateString("en-GB");
-
+   
     // Reusable Input Component
     const InputField = ({ label, type = "text", name, required = false, value, onChange }) => (
         <div className="w-full">

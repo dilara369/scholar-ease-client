@@ -43,19 +43,19 @@ const AuthProvider = ({ children }) => {
 
                 // get token and store client
                 const userInfo = { email: currentUser.email }
-                axiosPublic.post('/jwt', userInfo)
+            axiosPublic.post('/jwt', userInfo)
                     .then(res => {
-                        if (res.data.token) {
-                            localStorage.setItem('access-token', res.data.token)
-                            setLoading(false)
+                        console.log(res.data?.token)
+                        if (res.data?.token) {
+                            localStorage.setItem('access-token',res.data?.token)
+                         return   setLoading(false)
                         }
                     })
             } else {
-                // todo : remove cookies
-                localStorage.removeItem('access-token')
+             return   localStorage.removeItem('access-token')
             }
             setUser(currentUser)
-            setLoading(false);
+           return setLoading(false);
         })
         return () => {
             unSubscribe()

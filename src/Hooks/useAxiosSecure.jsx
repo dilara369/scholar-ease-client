@@ -11,8 +11,16 @@ const useAxiosSecure = () => {
     const { userSignOut } = useAuth()
     // requst interceptor to add authorization header for every secure call to the api
     axiosSecure.interceptors.request.use(function (config) {
-        const token = localStorage.getItem('access-token')
-        config.headers.authorizetion = `Bearer ${token}`
+        const rawToken = localStorage.getItem('access-token');
+  
+  // Add validation
+  if (!rawToken || rawToken.split('.').length !== 3) {
+    localStorage.removeItem('access-token');
+    window.location.replace('/login');
+    return Promise.reject('Invalid token format');
+  }
+
+  config.headers.Authorization = `Bearer ${rawToken}`;
         return config
     }, function (error) {
         // Do somthing with request error
@@ -23,11 +31,11 @@ const useAxiosSecure = () => {
         return response
     },
         async (error) => {
-            // const status = error.response.status
-            // if (status === 401 || status === 403) {
-            //     await userSignOut()
-            //     navigate('/login')
-            // }
+            const status = error.response.status
+            if (status === 401 || status === 403) {
+                await userSignOut()
+                navigate('/login')
+            }
 
             return Promise.reject(error)
         })
