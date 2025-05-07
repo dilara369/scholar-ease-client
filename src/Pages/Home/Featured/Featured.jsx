@@ -11,10 +11,13 @@ const Featured = () => {
 
 
     useEffect(() => {
-        axiosPublic.get('/featuredScholarship')
-            .then(res => {
-                setScholarships(res.data);
-            });
+        const  test = async ()=>{      
+        const res =   await axiosPublic.get('/featuredScholarship')
+                    console.log(res.data)
+                    setScholarships(res.data);
+                
+        }
+        test();
     }, [axiosPublic]);
 
     return (

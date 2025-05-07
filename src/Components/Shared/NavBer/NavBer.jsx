@@ -5,10 +5,10 @@ import { toast } from "react-toastify";
 import useRole from "../../../Hooks/useRole";
 
 const NavBer = () => {
-  const { user, userSignOut } = useAuth();
+  const { user, userSignOut ,name} = useAuth();
   const [isRole] = useRole();
   const [open, setOpen] = useState(false);
-
+console.log(name)
   const nav = (
     <>
       <NavLink to={"/"}>
